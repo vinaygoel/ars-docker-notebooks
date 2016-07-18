@@ -30,6 +30,7 @@ EXPOSE 5601 9200 8888
 ADD set-environment.sh /
 ADD install-services.sh /
 ADD start-services.sh /
+ADD stop-services.sh /
 
 RUN /install-services.sh
 

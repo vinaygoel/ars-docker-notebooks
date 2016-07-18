@@ -3,7 +3,8 @@ FROM continuumio/anaconda:latest
 MAINTAINER Vinay Goel <vinaygo@gmail.com>
 
 RUN apt-get update && apt-get install -y \
-    gcc
+    gcc \
+    default-jre
 
 RUN conda install -y \
     nltk \
@@ -24,6 +25,12 @@ RUN pip install \
 
 RUN python -c "import nltk; nltk.download('stopwords', halt_on_error=False)";
 
-EXPOSE 8888
+EXPOSE 5601 9200 8888 
 
-CMD ["jupyter","notebook", "--ip='*'", "--port=8888", "--no-browser"]
+ADD set-environment.sh /
+ADD install-services.sh /
+ADD start-services.sh /
+
+RUN /install-services.sh
+
+CMD ["bash"]

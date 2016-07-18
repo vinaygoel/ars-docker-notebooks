@@ -1,1 +1,1 @@
-# ars-docker-notebooks
+# Docker container for ARS workshop

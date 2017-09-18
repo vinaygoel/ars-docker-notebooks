@@ -4,8 +4,8 @@ export JAVA_HOME=/usr
 export KIBANA_VERSION=5.6.1
 export ELASTICSEARCH_VERSION=5.6.1
 
-export KIBANA_PORT=8081
-export ELASTICSEARCH_PORT=8080
+export KIBANA_PORT=5061
+export ELASTICSEARCH_PORT=9200
 
 # installation directories
 export HADOOP_PIG_LOCAL_INSTALL_DIR=$ARS_INSTALL_DIR/ars-hadoop-pig-local-install

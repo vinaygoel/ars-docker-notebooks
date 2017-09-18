@@ -1,12 +1,18 @@
 export ARS_INSTALL_DIR=/ars-install
 export JAVA_HOME=/usr
 
+export KIBANA_VERSION=5.6.1
+export ELASTICSEARCH_VERSION=5.6.1
+
+export KIBANA_PORT=8081
+export ELASTICSEARCH_PORT=8080
+
 # installation directories
 export HADOOP_PIG_LOCAL_INSTALL_DIR=$ARS_INSTALL_DIR/ars-hadoop-pig-local-install
 export ELASTICSEARCH_INSTALL_DIR=$ARS_INSTALL_DIR/ars-elasticsearch-install
-export ELASTICSEARCH_HOME=$ELASTICSEARCH_INSTALL_DIR/elasticsearch-1.5.2
+export ELASTICSEARCH_HOME=$ELASTICSEARCH_INSTALL_DIR/elasticsearch-${ELASTICSEARCH_VERSION}
 export KIBANA_INSTALL_DIR=$ARS_INSTALL_DIR/ars-kibana-install
-export KIBANA_HOME=$KIBANA_INSTALL_DIR/kibana-4.0.2
+export KIBANA_HOME=$KIBANA_INSTALL_DIR/kibana-${KIBANA_VERSION}
 
 # setting env variables
 export HADOOP_INSTALL_DIR=$HADOOP_PIG_LOCAL_INSTALL_DIR/hadoop-2-local-mode

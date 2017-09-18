@@ -25,7 +25,7 @@ RUN pip install \
 
 RUN python -c "import nltk; nltk.download('stopwords', halt_on_error=False)";
 
-EXPOSE 5601 9200 8888 
+EXPOSE 8080 8081 8888 
 
 ADD set-environment.sh /
 ADD install-services.sh /

@@ -15,10 +15,10 @@ if [ ! -d "$KIBANA_INSTALL_DIR" ]; then
   mkdir -p $KIBANA_INSTALL_DIR
   cd $KIBANA_INSTALL_DIR
   curl -O https://download.elastic.co/kibana/kibana/kibana-${KIBANA_VERSION}-linux-x64.tar.gz
-  tar xfz kibana-${KIBANA_VERSION}-linux-x86_64.tar.gz --no-same-owner
-  mv kibana-${KIBANA_VERSION}-linux-x86_64 kibana-${KIBANA_VERSION}
-  echo "server.port: ${KIBANA_PORT}" >> kibana-${KIBANA_VERSION}-linux-x86_64/config/kibana.yml
-  echo "elasticsearch.url: \"http://localhost:${ELASTICSEARCH_PORT}\"" >> kibana-${KIBANA_VERSION}-linux-x86_64/config/kibana.yml
+  tar xfz kibana-${KIBANA_VERSION}-linux-x64.tar.gz --no-same-owner
+  mv kibana-${KIBANA_VERSION}-linux-x64 kibana-${KIBANA_VERSION}
+  echo "server.port: ${KIBANA_PORT}" >> kibana-${KIBANA_VERSION}/config/kibana.yml
+  echo "elasticsearch.url: \"http://localhost:${ELASTICSEARCH_PORT}\"" >> kibana-${KIBANA_VERSION}/config/kibana.yml
 fi
 
 # Elasticsearch

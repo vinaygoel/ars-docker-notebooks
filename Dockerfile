@@ -4,6 +4,7 @@ MAINTAINER Vinay Goel <vinaygo@gmail.com>
 
 RUN apt-get update && apt-get install -y \
     gcc \
+    poppler-utils \
     default-jre
 
 RUN conda install -y \

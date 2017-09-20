@@ -2,9 +2,10 @@ FROM continuumio/anaconda:latest
 
 MAINTAINER Vinay Goel <vinaygo@gmail.com>
 
+RUN apt-add-repository ppa:webupd8team/java
 RUN apt-get update && apt-get install -y \
     gcc \
-    default-jre
+    oracle-java8-installer
 
 RUN conda install -y \
     nltk \

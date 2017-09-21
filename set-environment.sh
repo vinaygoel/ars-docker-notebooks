@@ -1,3 +1,4 @@
+#!/usr/env/bin bash
 export ARS_INSTALL_DIR=/ars-install
 export JAVA_HOME=/usr
 

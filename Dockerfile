@@ -34,5 +34,8 @@ ADD start-services.sh /
 ADD stop-services.sh /
 
 RUN /install-services.sh
+RUN cd /ars-workshop && \
+    source /set-environment.sh && \
+    /start-services.sh
 
 CMD ["bash"]

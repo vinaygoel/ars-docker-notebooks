@@ -34,4 +34,4 @@ ADD start-services.sh /
 ADD stop-services.sh /
 
 RUN /install-services.sh
-ENTRYPOINT /start-services.sh
+ENTRYPOINT /start-services.sh && bash

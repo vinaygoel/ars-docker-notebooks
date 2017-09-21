@@ -17,5 +17,5 @@ fi
 # Run Jupyter notebook in the background (port 8888)
 ps aux | grep -v grep | grep jupyter > /dev/null
 if [ $? -ne 0 ]; then
-   nohup jupyter notebook --ip='*' --port=8888 --no-browser 2> /dev/null &
+   nohup jupyter notebook --ip='*' --port=8888 --no-browser --allow-root 2> /dev/null &
 fi

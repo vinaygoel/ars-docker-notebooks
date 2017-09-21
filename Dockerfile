@@ -33,9 +33,6 @@ ADD install-services.sh /
 ADD start-services.sh /
 ADD stop-services.sh /
 
-
-RUN /bin/bash -c "source /set-environment.sh" && \
-    /install-services.sh && \
-    /start-services.sh
-
+RUN /install-services.sh
+ENTRYPOINT ["/start-services.sh"]
 CMD ["bash"]
